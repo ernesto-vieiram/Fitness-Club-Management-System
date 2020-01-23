@@ -1,0 +1,264 @@
+
+
+* {
+    margin:0px;
+    padding:0px;
+    font-family: "Arial","helvetica",sans-serif;
+}
+body{
+   background-color: #88C0BC;
+}
+h1{
+  /*text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;*/
+  letter-spacing: -4px;
+  text-transform:uppercase;
+  border-radius: 20px;
+  margin-top:2%;
+  margin-left:35%;
+  margin-bottom: auto;
+  height: 40px;
+  font-size: 70px;
+  font-weight:100;
+  text-decoration: none;
+
+}
+/*aqui anava input [type="text"] -> es una proba, si no va be tornar a posar-ho*/
+
+
+input [type="text"],buttonS{
+  color:#FAFAFA;
+}
+#inicioHead{
+    margin-top:10%;
+}
+.image{
+  height: 150px;
+  width: 150px;
+  display:block;
+  border-radius:50%; /*lo hace circulo*/
+  margin-left: 8%;
+  margin-top:-8%;
+}
+.image_fondo{
+  margin-top: 3%;
+  height: 60%;
+  position: absolute;
+  border-radius:2%;
+  width:50%;
+}
+.image_fondo2{
+  margin-top: 3%;
+  height: 60%;
+  position:absolute;
+  margin-left:50%;
+  width:50%;
+  border-radius:2%;
+}
+.fundas h1{
+  text-transform: none;
+  margin-top: -6%;
+  text-align:justify;
+}
+.fundaiPhone, .fundaSamsung, .fundaBQ, .fundaHuawei, .fundaNokia, .fundaXiaomi{
+  margin-top:5%;
+  position:absolute;
+  width: 710px;
+  margin-left: 8%;
+  padding:10px 10px;
+}
+/*listado de productos en ajax del fichero productesActius*/
+
+tabla, #resumen{
+    margin-top:-12%;
+    margin-left:75%;
+    width: 12%;
+
+}
+
+
+/*descripcion productos arcivo productesActius*/
+#producte1,#producte2,#producte3,#producte4,#producte5,#producte6,#producte7{ /*Listado de productos en Ajax, archivo vista/productesActius*/
+    color: black;
+    list-style: none;
+    padding:15%;
+    margin-top:10%;
+    width: 130%;
+    height: 20%;
+    background-color: white;
+    display:block;
+    border: 0px;
+    margin-left:10%;
+}
+/*fichero productesBuscats*/
+#productsDescription{
+    margin-top:8%;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size: 140%;
+    margin-bottom:3%;
+}
+#imatgeProducte{
+    margin-left:-25%;
+    margin-top:-5%;
+
+}
+#añadido{/*imagenes de productesBuscats cargadas con ajax*/
+    display: block;
+    margin-left:10%;
+    margin-top:5%;
+}
+
+.productsActive{
+    top:5%;
+    list-style: none;
+
+ }
+/*descripcion del listado de productos en Ajax, archivo vista/productesActius*/
+#producte1:hover,#producte2:hover,#producte3:hover,#producte4:hover,#producte5:hover,#producte6:hover,#producte7:hover{
+    background-color:#c4b59d;
+
+}
+#productosActivo{/*listado de productos archivo productsActive*/
+    position: absolute;
+    top:40%;
+    margin-left:10%;
+}
+/*descrfipcion de los productos cargados con ajax del archivo productesBuscats*/
+.divi{
+    margin-top:2%;
+    margin-left:40%;
+    text-transform: uppercase;
+}
+#contact p{
+    font:20px "Arial";
+    margin-left:25%;
+}
+
+.divi #butonn{
+    padding: 2%;
+    width: 10%;
+    height: auto;
+    margin-top:-7%;
+    margin-left: 65%;
+    color: black;
+    display:block;
+    border: 0px;
+    background-color: white;
+}
+.divi #butonn:hover{
+    background-color:#c4b59d;
+}
+#carrito{
+    margin-top: -3%;
+    padding: 0 20px;;
+}
+#caract {
+    margin-left: 70%;
+    margin-top: 6%;
+    font:bold 30px "Arial";
+
+}
+#caract ul{
+
+    margin-top:3%;
+    font:bold 20px "Arial";
+
+}
+.Struct{
+  margin-top: 5%;
+}
+
+#final_escrito{
+  margin-left: 30%;
+  color:black;
+  margin-right:30%;
+  display: inline-block;
+  text-align: justify;
+  line-height: 24px;
+  font-size: 20px;
+  font-family: "Arial", fantasy;
+}
+
+#header {
+    top:0;
+    position:fixed;
+    left:0;
+    width: 100%;
+    font-family: "Arial",fantasy;
+    background-color: rgba(0,0,0,0.8);
+    height: 40;
+    z-index: 2;/*para que se ponga por encima de la foto*/
+}
+
+ol{
+    margin-left: None;
+}
+#productesActiusHead{/*header de productesActius para el carrito*/
+    margin-top:5%;
+}
+#car{
+    margin-top:-1%;
+}
+#buscar{
+  content: attr(title);
+  position: relative;
+  color:black;
+  border: 0;
+  z-index: 20;
+  padding:4px;
+  margin-top:6px;
+  width:120px;
+}
+.nav {
+  list-style-type: none;
+  position: fixed;
+  top:0;
+  left:0;
+  padding: 0 180px;
+
+}
+.nav ul {
+
+  margin-left:auto;
+
+}
+.nav li {
+  /*margin:0 auto;*/
+  width: -10px;
+  margin: 0 15px;
+}
+.nav > li {
+    float:left;/*hace que los elementos del menu esten al lado del otr y no debajo*/
+}
+
+.nav li a{
+
+    color:#E6E6E6;
+    padding:10px 30px;
+    display:block;
+}
+
+.nav li a:hover { /*fondo del desplegable*/
+    background-color:#c4b59d;
+}
+
+.nav li ul{ /*no ponerle color*/
+    display:none;
+    list-style-type: none;
+    position:absolute;
+    min-width:10px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li{
+    position:relative;
+    background-color:rgba(0,0,0,0.8);
+
+}
+
+.nav li ul li ul {
+    top:0px;
+}
