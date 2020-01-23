@@ -155,3 +155,8 @@ input[type=submit]{
   margin-bottom: 15px;
   /*background-color: */
 }
+
+input.inputStyle{
+  padding: 3px;
+  border: 1px solid #b2bec3;
+}

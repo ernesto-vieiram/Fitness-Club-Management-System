@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone case</title>
+    <title>Gym</title>
     <!--<link rel="icon" type="image/x-icon" href="Imagenes/logo.ico">-->
     <meta name="description" content="fundas para movil" /> <!--lo que la gente buscara en el buscador-->
   </head>
@@ -26,7 +26,7 @@
                               <li><a href="index.php?accio=registre">Sign up</a></li>
                               <?php
                           }else{
-                              ?> <li><a href="index.php?accio=cerrarSesion">Cerrar sesion</a></li><?php
+                              ?> <li><a href="index.php?accio=cerrarSesion">Log out</a></li><?php
                           }?>
 
                       </ul>

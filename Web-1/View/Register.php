@@ -16,15 +16,20 @@
         <h2> Create your account</h2> </br>
           <div id="registreCamps">
               <label id="registre" for="Name">Name: </label>
-              <input type="text" name="Name" id="Name"></input></br>
+              <input class="inputStyle" type="text" name="Name" id="Name"></input></br>
+              <br>
               <label id="registre" for="Surname">Surname: </label>
-              <input type="text" name="Surname" id="Surname"></input></br>
+              <input class="inputStyle" type="text" name="Surname" id="Surname"></input></br>
+              <br>
               <label id="registre" for="email">Email: </label>
-              <input type="email" name="email" id="email"></input></br>
+              <input class="inputStyle" type="email" name="email" id="email"></input></br>
+              <br>
               <label id="registre" for="password">Password: </label>
-              <input type="password" id="password" name="password"></input></br>
+              <input class="inputStyle" type="password" id="password" name="password"></input></br>
+              <br>
               <label id="registre" for="number">Telefon number:</label>
-              <input type="number" step="1" id="number" name="number" maxlength="9"></input></br>
+              <input class="inputStyle" type="number" step="1" id="number" name="number" maxlength="9"></input></br>
+              <br>
             </br></br>
           </div>
           <input type="submit" id="but" value="Sign up"></input>

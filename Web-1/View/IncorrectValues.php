@@ -7,8 +7,12 @@
 <body>
 <?php include "MenuOption.php";
 include "header.php";?>
+<div id="incorrectLogin">
+  <p>You are not registered.</p>
+  <br>
+  <br>
+  <a href="index.php?accio=registre" >Sign Up!</button></a>
+</div>
 
-<p>You are not registered.</p>
-<a href="index.php?accio=registre" >Sign Up!</button></a>
 
 </html>

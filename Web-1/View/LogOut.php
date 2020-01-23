@@ -1,7 +1,7 @@
 <?php
     session_destroy();
     include "MenuOption.php";
-
+    header("location:index.php?=inicio");
 ?>
 <html>
     <body>

@@ -204,7 +204,7 @@ tabla, #resumen{
     left:0;
     width: 100%;
     font-family: "Arial",fantasy;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1);
     height: 40;
     z-index: 2;/*para que se ponga por encima de la foto*/
 }
@@ -280,4 +280,194 @@ ol{
 
 .nav li ul li ul {
     top:0px;
+}
+
+table#comandas{
+  width: 700px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+table#comandas td{
+  padding: 15px;
+}
+
+a#buttonAddCourse{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #55efc4;
+  border: 1px solid black;
+  color: black;
+}
+
+a#buttonAddCourse:hover{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  text-decoration: underline;
+  background-color: #00b894;
+}
+
+a.buttonDeleteCourse{
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #fab1a0;
+  border: 1px solid black;
+  color: black;
+}
+
+a.buttonDeleteCourse:hover{
+  width: 80px;
+  text-decoration: underline;
+  background-color: #e17055;
+}
+
+
+a.buttonShowParticipants{
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #74b9ff;
+  border: 1px solid black;
+  color: black;
+}
+
+a.buttonShowParticipants:hover{
+  width: 80px;
+  text-decoration: underline;
+  background-color: #0984e3;
+}
+
+ul.loginCorrect{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+}
+
+ul.loginCorrect p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+a.returnLink{
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #55efc4;
+  border: 1px solid black;
+  color: black;
+}
+
+a.returnLink:hover{
+  text-decoration: underline;
+  background-color: #00b894;
+}
+
+form#formAddCourse{
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-family: sans-serif;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+input#but{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #55efc4;
+  border: 1px solid black;
+  color: black;
+}
+
+input#but:hover{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  text-decoration: underline;
+  background-color: #00b894;
+}
+
+input.inputStyle{
+  padding: 3px;
+  border: 1px solid #b2bec3;
+}
+
+input#buttonS{
+  padding: 6px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #74b9ff;
+}
+
+input#buttonS:hover{
+  background-color: #0984e3;
+  text-decoration: underline;
+}
+
+div#incorrectLogin{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+div#incorrectLogin p{
+  font-size: 22px;
+}
+
+div#incorrectLogin a{
+  color: black;
+  padding: 6px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: #74b9ff;
+}
+
+div#incorrectLogin a:hover{
+  background-color: #0984e3;
+  text-decoration: underline;
+}
+
+img#imageLogin{
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 60px auto;
 }
