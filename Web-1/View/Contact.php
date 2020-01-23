@@ -9,8 +9,6 @@
             <?php
             include "header.php";
             include "MenuOption.php";
-            if (isset($_SESSION['usuari'])) {
-                include __DIR__ . '/../controlador/carritoP.php';}
             ?>
         </div>
         <div id="contact">

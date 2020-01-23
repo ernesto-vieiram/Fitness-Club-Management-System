@@ -1,4 +1,4 @@
-<html>
+<!--<html>
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="Pictures/logo.ico">
@@ -12,7 +12,7 @@
 
             <li> <?php
                     if (isset($_SESSION['usuari'])){
-                    ?><p>Welcome <?php print_r($_SESSION['usuari']['nombre'])?></p>
+                    ?><p>Welcome <?php print_r($user['Name'])?></p>
                     <?php
                         }else{?>
                             <p>Benvingut admin</p>

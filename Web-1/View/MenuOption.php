@@ -17,7 +17,7 @@
               <ul class="nav">
                   <li><a href="index.php?accio=inicio">Home</a></li>
 
-                  <li><a href="index.php?accio=productesActius">Courses</a>
+                  <li><a href="index.php?accio=ShowCourses">Courses</a>
                   </li>
                   <li><a href="index.php?accio=MiCuenta">My account</a>
                       <ul>
@@ -31,16 +31,13 @@
 
                       </ul>
                   </li>
-                  <li>
-                    <form method="post" action="index.php?accio=fundaMarcaX">
-                      <i class="fa fa-search " style="color:white;" aria-hidden="true   "></i>
-                      <label for="buscar"></label >
-                      <input id="buscar" type="text" name="nomProducte" placeholder="Buscar..."></input></form>
-                    </li>
                   <li><a href="index.php?accio=contacto">Contact</a></li>
                   <?php
-                  if (!isset($_SESSION['admin'])) {?>
-                    <li id="car"><a href="index.php?accio=carrito"><i class="fa fa-cart-plus fa-2x" style="color:white;" aria-hidden="true"></i></a></li>
+                  if (isset($_SESSION['admin'])) {?>
+                      <li><a> Hello! ADMIN </a></li>
+                    <?php }
+                  if (isset($_SESSION['usuari'])) {?>
+                      <li><a> Hello! $_SESSION["Name"] </a></li>
                     <?php }?>
               </ul>
           </div>

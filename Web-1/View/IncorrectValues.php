@@ -8,7 +8,7 @@
 <?php include "MenuOption.php";
 include "header.php";?>
 
-<p>Incorrect values. Try again!/p>
+<p>You are not registered.</p>
 <a href="index.php?accio=registre" >Sign Up!</button></a>
 
 </html>
