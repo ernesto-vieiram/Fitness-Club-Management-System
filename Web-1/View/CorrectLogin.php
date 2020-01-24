@@ -7,7 +7,7 @@
     <body>
         <?php include "MenuOption.php";
         ?>
-        <img id="imageLogin" class="image" src="Pictures/fondo_head2.jpg">
+        <img class="image" src="Pictures/Captura.PNG">
         <ul class="loginCorrect">
 
             <li> <?php
@@ -15,11 +15,11 @@
                     ?><p>Welcome <?php print_r($user['Name'])?></p>
                     <?php
                         }else{?>
-                            <p>Welcome admin!</p>
+                            <p>Benvingut admin</p>
                         <?php }?>
 
         </ul>
 
-        <a class='returnLink' href="index.php?accio=inicio">Click to return!</button></a>
+        <a href="index.php?accio=inicio">click para volver!</button></a>
     </body>
 </html>

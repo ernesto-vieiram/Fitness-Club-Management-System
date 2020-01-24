@@ -2,35 +2,38 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym</title>
+    <title>Wroclaw Fitness</title>
+    <link rel="stylesheet" type="text/css" href=CSS/estilos.css>
+
     <!--<link rel="icon" type="image/x-icon" href="Imagenes/logo.ico">-->
     <meta name="description" content="fundas para movil" /> <!--lo que la gente buscara en el buscador-->
   </head>
   <body>
     <section class="Struct">
       <header>
-        <link rel="stylesheet" type="text/css" href=CSS/estilos.css>
-        </br>
+
         <div id="container">
 
           <div id="header">
               <ul class="nav">
                   <li><a href="index.php?accio=inicio">Home</a></li>
+                  <li><a href="index.php?accio=ShowCourses">Courses</a></li>
 
-                  <li><a href="index.php?accio=ShowCourses">Courses</a>
-                  </li>
-                  <li><a href="index.php?accio=MiCuenta">My account</a>
-                      <ul>
-                          <?php if (!isset($_SESSION['usuari']) and !isset($_SESSION['admin'])){?>
-                              <li> <a href="index.php?accio=login">Log in</a></li>
-                              <li><a href="index.php?accio=registre">Sign up</a></li>
-                              <?php
-                          }else{
-                              ?> <li><a href="index.php?accio=cerrarSesion">Log out</a></li><?php
+                  <div class="dropdown">
+                    <li class= 'dropbtn'><a href="index.php?accio=MiCuenta">My account</a></li>
+                        <?php if (!isset($_SESSION['usuari']) and !isset($_SESSION['admin'])){
+                        ?>
+                        <div class="dropdown-content">
+                            <a href="index.php?accio=login">Log in</a></li>
+                            <a href="index.php?accio=registre">Sign up</a></li>
+                        </div>
+                  </div>
+                         <?php }else{
+                          ?> 
+                          <li><a href="index.php?accio=cerrarSesion">Cerrar sesion</a></li>
+                          <?php
                           }?>
-
-                      </ul>
-                  </li>
+                  
                   <li><a href="index.php?accio=contacto">Contact</a></li>
                   <?php
                   if (isset($_SESSION['admin'])) {?>

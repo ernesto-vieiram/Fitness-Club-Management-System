@@ -9,7 +9,7 @@
 include "header.php";?>
 
 
-<p id="confirm"> Registration succesful</p>
+<p id="confirm"> Registration succesfully</p>
 
 <a href="index.php?=inicio" onclick='document.getElementById("confirm").innerHTML = ""'>Home</button></a>
 

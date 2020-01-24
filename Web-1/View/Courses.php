@@ -3,6 +3,7 @@
     <link rel="icon" type="image/x-icon" href="Imagenes/logo.ico">
     <link rel="stylesheet" type="text/css" href=CSS/estilos.css>
 </head>
+
 <body>
 <div id=inicioHead>
     <?php
@@ -26,11 +27,11 @@
         <td><a href="index.php?accio=Enroll&Id=<?php echo $l['CourseID'];?>">Enroll</a></td>
         <?php }?>
         <?php if(isset($_SESSION['admin'])){?>
-            <td><a class="buttonDeleteCourse" href="index.php?accio=DeleteCourse&Id=<?php echo $l['CourseID'];?>">Delete</a></td>
-            <<td><a class="buttonShowParticipants" href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
+            <td><a href="index.php?accio=DeleteCourse&Id=<?php echo $l['CourseID'];?>">Delete</a></td>
+            <<td><a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
         <?php }?>
         <?php if(isset($_SESSION['employee'])){?>
-            <<td><a class="buttonShowParticipants" href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
+            <<td><a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
     <?php }?>
 
         <?php echo"</tr>";
@@ -38,7 +39,7 @@
      endforeach;?>
     </table>
 
-    <a id="buttonAddCourse" href="index.php?accio=AddCourse"> Add Course</a>
+    <a href="index.php?accio=AddCourse"> Add Course</a>
     </table>
 </div>
 </body>
