@@ -282,8 +282,8 @@ ol{
   left: 50%;
   transform: translate(-50%,-50%);
   background: #191919cc;
-  opacity: 0,1;
   text-align: center;
+  vertical-align: middle;
 }
 .txtb{
   border: 0;
@@ -343,7 +343,8 @@ ol{
 }
 .box p{
   color: white;
-  font-size: 20px;
+  font-size: 30px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 table {
@@ -361,4 +362,23 @@ table {
 .second{
   text-decoration: underline;
   text-align: right;
+}
+.a{
+  border:0;
+  background: none;
+  display: block;
+  margin:20px auto;
+  text-align: center;
+  border: 2px solid #fff;
+  padding: 14px 40px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.a:hover{
+  background: #fff;
+  color:#000;
 }
