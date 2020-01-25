@@ -17,15 +17,15 @@ function encriptPsswd($sin_psswd){
     return password_hash($sin_psswd, PASSWORD_DEFAULT);
 }
 
-function registrarUsuari($Name, $Surname, $email, $password, $number)
+function registrarUsuari($Name, $Surname, $email, $password, $number, $Role)
 {
     global $db;
     $password = encriptPsswd($password);
 
     try {
 
-        $stmt = "INSERT INTO users (Name,Surname,Email,Password,Telefon, Rool)
-                          VALUES ('$Name','$Surname','$email','$password','$number', 0)";
+        $stmt = "INSERT INTO users (Name, Surname, Email, Password, Telefon, Rool)
+                          VALUES ('$Name','$Surname','$email','$password','$number', $Role)";
         mysqli_query($db, $stmt);
 
     }catch(PDOException $ex){
@@ -98,7 +98,7 @@ function getEnrolledCourses($userID){
   return $sql;
 }
 
-function getDayTimeCourse($day, $hour){
+function getDayTimeCourse2($day, $hour){
   global $db;
     $sql = $db->query("SELECT * FROM COURSES WHERE CourseDay = '$day' AND CourseHour = '$hour'");
     return $sql->fetch_row()[1];
@@ -111,5 +111,52 @@ function getMembers($Id){
     $stmt= $db->query("SELECT *  FROM MembersCourses  WHERE CourseID = '$Id'");
     $members=$stmt->fetch_all();
     return $members;
-
 }
+
+function userLookup($Name, $Surname, $Email, $Role){
+  global $db;
+  $i = 0;
+  $query = "SELECT Id, Name, Surname, Email, Rool FROM users WHERE ";
+
+  if("$Name" != ""){
+    //Name introduced
+    $query .= "Name = '$Name'";
+    $i += 1;
+  }
+  if("$Surname" != ""){
+    //Surname introduced
+    if($i > 0){$query .= " AND ";}
+    $query .= "Surname = '$Surname'";
+    $i += 1;
+    }
+
+  if("$Email" != ""){
+    //Email introduced
+    if($i > 0){$query .= " AND ";}
+    $query .= "Email = '$Email'";
+    $i++;
+  }
+
+  if("$Role" != ""){
+    //Role introduced
+    if($i > 0){$query .= " AND ";}
+    $query .= "Rool = $Role";
+    $i += 1;
+  }
+  if($i == 0){
+    return [];
+  }
+
+  $stmt= $db->query($query);
+  if(!$stmt){return $db->error . $query;}
+  return $stmt->fetch_all();
+}
+
+  function removeUser($Id){
+    global $db;
+
+    $stmt = "DELETE FROM MembersCourses WHERE MemberID = '$Id'";
+    mysqli_query($db, $stmt);
+    $stmt = "DELETE FROM users WHERE Id = '$Id'";
+    mysqli_query($db, $stmt);
+  }

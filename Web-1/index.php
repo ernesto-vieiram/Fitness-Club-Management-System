@@ -3,7 +3,7 @@
 session_start();
 
 $accio = $_GET['accio'] ;
-switch ($accio) {
+switch ($accio){
 
     case 'cerrarSesion':
         include __DIR__.'/Controllers/LogOutController.php';
@@ -73,6 +73,30 @@ switch ($accio) {
 
     case 'ShowList':
         include __DIR__.'/Controllers/ShowListController.php';
+        break;
+
+    case 'ManageUsers':
+        include __DIR__."/Controllers/manageUsersController.php";
+        break;
+
+    case 'userLookup':
+        include __DIR__."/Controllers/showUserResultsController.php";
+        break;
+
+    case 'deleteUser':
+        include __DIR__."/Controllers/deleteUserController.php";
+        break;
+
+    case 'addUser':
+        include __DIR__."/Controllers/addUserController.php";
+        break;
+
+    case 'newUserFormSubmit':
+        include __DIR__."/Controllers/newUserFormSubmitController.php";
+        break;
+
+    case 'Timetable':
+        include __DIR__."/Controllers/drawTimeTableController.php";
         break;
 
     default:

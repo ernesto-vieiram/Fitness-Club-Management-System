@@ -1,6 +1,6 @@
 <?php
-    include_once __DIR__.'/../Model/BD.php';
-    
+    include __DIR__.'/../Model/BD.php';
+
     $CourseName = htmlentities($_POST['courseName']);
     $CourseDay = htmlentities($_POST['courseDay']);
     $CourseHour = htmlentities($_POST['courseHour']);
@@ -9,6 +9,6 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         addCourse($CourseName, $CourseDay, $CourseHour, $trainerID);
 
-        include __DIR__.'/../Controllers/CoursesController.php';
+        include __DIR__.'/../View/Home.php';
     }
  ?>

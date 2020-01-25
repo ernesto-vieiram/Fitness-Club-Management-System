@@ -20,7 +20,7 @@
         <link rel="icon" type="image/x-icon" href="Pictures/logo.ico">
         <link rel="stylesheet" href="iconos/font-awesome/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../CSS/register.css">	
+        <link rel="stylesheet" href="../CSS/register.css">
 		<link rel="stylesheet" type="text/css" href=CSS/estilos.css>
   </head>
   <header>
@@ -31,10 +31,10 @@
 
 		<form class = 'box' method="post" action="index.php?accio=registerSubmit">
 			<h1 class= 'log'>Sign Up</h1>
-			<input type="text" name='' placeholder="Name" class="txtb">
-			<input type="text" name='' placeholder="Surname" class="txtb" >
-			<input type="email" name='' placeholder="Email" class="txtb">
-			<input type="password" name='' placeholder="Password" class="txtb">
+			<input type="text" name="Name" placeholder="Name" class="txtb">
+			<input type="text" name="Surname" placeholder="Surname" class="txtb" >
+			<input type="email" name="Email" placeholder="Email" class="txtb">
+			<input type="password" name="Password" placeholder="Password" class="txtb">
 			<input type="submit" name='' value="Sign Up" >
 	  	</form>
   </body>

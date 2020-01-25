@@ -1,0 +1,61 @@
+*{
+    font-family:  "Arial","helvetica",sans-serif;;
+}
+body{
+    background-color:#88C0BC;
+}
+.imageRegister{
+    margin-top: -4%;
+    height: 150px;
+    width: 150px;
+    display:block;
+    border-radius:50%; /*lo hace circulo*/
+    margin-left: 8%;
+}
+h2,h3, #registre{
+    margin-left:35%;
+    margin-top: -20px;
+}
+h2,h3{
+    /*text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;*/
+    margin-left: 33%;
+    font-weight: 100;
+    letter-spacing: -4px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    height: 40px;
+    font-size:40px;
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+#contact{
+    margin-left: 30%;
+    color:black;
+    margin-left:35%;
+    display: inline-block;
+    text-align: justify;
+    line-height: 24px;
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+}
+input{
+    background-color: white;
+}
+/*bot es el texto que añadimos en registro*/
+#bot{
+    margin-left: 30%;
+    text-align: justify;
+}
+input[type=submit]{
+    margin-left: 44%;
+    padding: 5px 5px;
+    cursor: pointer;
+    color: black;
+    border: outset;
+    border-width: 0.5px;
+    margin-bottom: 15px;
+    /*background-color: */
+}

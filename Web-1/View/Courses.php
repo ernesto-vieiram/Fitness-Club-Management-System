@@ -7,7 +7,6 @@
 <body>
 <div id=inicioHead>
     <?php
-    /*include __DIR__."/../Controller/CoursesController.php";*/
     include "header.php";
     include "MenuOption.php";
     ?>
@@ -27,19 +26,17 @@
         <td><a href="index.php?accio=Enroll&Id=<?php echo $l['CourseID'];?>">Enroll</a></td>
         <?php }?>
         <?php if(isset($_SESSION['admin'])){?>
-            <td><a href="index.php?accio=DeleteCourse&Id=<?php echo $l['CourseID'];?>">Delete</a></td>
-            <<td><a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
+            <td>&nbsp &nbsp<a href="index.php?accio=DeleteCourse&Id=<?php echo $l['CourseID'];?>">Delete</a>&nbsp</td>
+            <td>&nbsp<a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
         <?php }?>
         <?php if(isset($_SESSION['employee'])){?>
-            <<td><a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">Show Participants</a></td>
+            <<td><a href="index.php?accio=ShowList&Id=<?php echo $l['CourseID'];?>">  Show Participants</a></td>
     <?php }?>
 
         <?php echo"</tr>";
 
      endforeach;?>
-    </table>
-
-    <a href="index.php?accio=AddCourse"> Add Course</a>
+     <td colspan="5" style="text-align: center"><a href="index.php?accio=AddCourse"> Add Course</a></td>
     </table>
 </div>
 </body>

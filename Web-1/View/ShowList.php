@@ -13,10 +13,11 @@
 
 </div>
 <h1>Enrollment List:</h1>
-<table>
+<table style="table-layout:fixed">
   <?php
       foreach($members as $member){
-        echo "$member[2]";
+        echo "<tr>";
+        echo "<td width=50px align='left'>$member[2]</td>";
       }
    ?>
 

@@ -20,7 +20,7 @@
         <link rel="icon" type="image/x-icon" href="Pictures/logo.ico">
         <link rel="stylesheet" href="iconos/font-awesome/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet">
-    
+
     </head>
 
     <header>
@@ -30,8 +30,8 @@
     <body style="background-image: url('../Pictures/fondo_head.jpg'); background-repeat: no-repeat;background-position: center;background-size: 100% 75%;">
         <form class = 'box' method="post" action="index.php?accio=loginCorrecto">
             <h1 class = 'log'>Login</h1>
-            <input type="email" name ='' placeholder="Email" class='txtb'>
-            <input type="password" name ='' placeholder="Password" class='txtb'>
+            <input type="email" name ="Email" placeholder="Email" class='txtb'>
+            <input type="password" name ="Password" placeholder="Password" class='txtb'>
             <input type="submit" name = '' value="Login">
         </form>
     </body>

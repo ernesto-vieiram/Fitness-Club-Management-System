@@ -17,6 +17,12 @@
           <div id="header">
               <ul class="nav">
                   <li><a href="index.php?accio=inicio">Home</a></li>
+
+                  <?php if (isset($_SESSION['admin'])){
+                  ?>
+                  <li><a href="index.php?accio=ManageUsers"</a>Users</li>
+                    <?php }?>
+                  <li><a href="index.php?accio=Timetable">Timetable</a></li>
                   <li><a href="index.php?accio=ShowCourses">Courses</a></li>
 
                   <div class="dropdown">
@@ -29,18 +35,18 @@
                         </div>
                   </div>
                          <?php }else{
-                          ?> 
+                          ?>
                           <li><a href="index.php?accio=cerrarSesion">Cerrar sesion</a></li>
                           <?php
                           }?>
-                  
+
                   <li><a href="index.php?accio=contacto">Contact</a></li>
                   <?php
                   if (isset($_SESSION['admin'])) {?>
                       <li><a> Hello! ADMIN </a></li>
                     <?php }
                   if (isset($_SESSION['usuari'])) {?>
-                      <li><a> Hello! $_SESSION["Name"] </a></li>
+                      <li><a> Hello <?php echo $_SESSION['usuari']['Name']; ?>!</a></li>
                     <?php }?>
               </ul>
           </div>

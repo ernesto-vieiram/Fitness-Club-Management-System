@@ -2,8 +2,8 @@
     include __DIR__.'/../Model/BD.php';
 
     $userExist=false;
-    $user=LookforUser($_REQUEST['email']);
-    if (password_verify($_REQUEST['password'], $user['Password'])){
+    $user=LookforUser($_REQUEST["Email"]);
+    if (password_verify($_REQUEST["Password"], $user['Password'])){
             $userExist=true;
     }
 
@@ -44,10 +44,10 @@
                 include __DIR__ . '/../View/IncorrectValues.php';
                 break;
         }
-            include __DIR__.'/../View/CorrectLogin.php';
+            include __DIR__.'/../Controllers/HomeController.php';
     }
     else{
         include __DIR__ . '/../View/IncorrectValues.php';
     }
-    
+
 ?>
