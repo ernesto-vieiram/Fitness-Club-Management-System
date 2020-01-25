@@ -14,14 +14,15 @@
 </div>
 
 <div style="align-content:center;">
-    <table id="comandas">
+    <table id="comandas" style='table-layout: fixed;'>
     <?php
     foreach ($courses as $l):
 
         echo "<tr>"?>
-        <td> <?php echo $l['CourseName'];?></td>
-        <td> <?php echo $l['CourseDay'];?></td>
-        <td> <?php echo $l['CourseHour'];?></td>
+        <td style='width: 50px; text-align: center;'> <?php echo $l['CourseID'];?></td>
+        <td style='width: 200px;'> <?php echo $l['CourseName'];?></td>
+        <td style='width: 200px;'> <?php echo $l['CourseDay'];?></td>
+        <td style='text-align: right;'> <?php echo $l['CourseHour'];?></td>
         <?php if(isset($_SESSION['usuari'])){?>
         <td><a href="index.php?accio=Enroll&Id=<?php echo $l['CourseID'];?>">Enroll</a></td>
         <?php }?>

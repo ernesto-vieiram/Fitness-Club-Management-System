@@ -19,10 +19,25 @@
             <input type="text" name="courseName" id="Name"></input></br>
 
             <label id="courseDataForm" for="courseDay">Course Day: </label>
-            <input type="text" name="courseDay" id="courseDay"></input></br>
+            <select class="" name="courseDay">
+              <option value="MONDAY">Monday</option>
+              <option value="TUESDAY">Tuesday</option>
+              <option value="WEDNESDAY">Wednesday</option>
+              <option value="THURSDAY">Thursday</option>
+              <option value="FRIDAY">Friday</option>
+              <option value="SATURDAY">Saturday</option>
+              <option value="SUNDAY">Sunday</option>
+            </select></br>
 
             <label id="courseDataForm" for="courseHour">Course Hour: </label>
-            <input type="text" name="courseHour" id="courseHour"></input></br>
+            <select class="" name="courseHour">
+              <?php
+              for($i=8;$i<22;$i++){
+                $hour = "$i:00";
+                echo "<option value=$hour>$hour</option>";
+              } ?>
+
+            </select></br>
 
             <label id="courseDataForm" for="trainerID">Tainer ID: </label>
             <input type="number" id="trainerID" name="trainerID"></input></br>

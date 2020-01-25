@@ -6,11 +6,27 @@
 
     <style media="screen">
       table, th, td, tr {
-        table-layout: fixed;
+        table-layout: auto;
         border-bottom: 1px solid black;
+
           }
+        .courseItem{
+          font-size: 14px;
+          height: 40px;
+          text-align: center;
+          background-color: #FF8A65;
+          border-radius: 10px;
+          vertical-align: middle;
+        }
+
+        .emptyItem{
+          height: 40px;
+          font-size: 14px;
+          text-align: center;
+          background-color: rgba(0,0,0,0);
+          vertical-align: middle;
+        }
     </style>
-    <link rel="stylesheet" type="text/css" href=../CSS/tableStyle.css>
   </head>
   <body>
     <?php
@@ -29,7 +45,7 @@
       echo "<tr>";
       echo "<th rowspan='1'>HOUR</th>";
       foreach($days as $day){
-        echo "<th rowspan='1' width='30px'>$day</th>";
+        echo "<th rowspan='1'>$day</th>";
       }
       echo "</tr>";
 
@@ -41,10 +57,10 @@
           foreach ($days as $day){
               $course = getDayTimeCourse($day, $hour);
               if($course){
-                echo "<td colspan='0' rowspan='1' class='courseItem' width='10px'>
+                echo "<td colspan='0' rowspan='1' class='courseItem' style='width: 200px;'>
                       $course</td>";
               }else{
-              echo "<td colspan='0' rowspan='1' class='emptyItem' width='10px'></td>";
+              echo "<td colspan='0' rowspan='1' class='emptyItem' style='width: 200px;'></td>";
             }
           }
           echo "</tr>";

@@ -16,8 +16,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL) ) {
         $usuari=registrarUsuari($Name, $Surname, $email, $password, '0000000', 0);
+        switch ($usuari) {
+          case 0:
+            //Succesfull Reistration;
+            include __DIR__.'/../View/Registered.php';
+            break;
+          case 1:
+            //User already pcntl_wexits
+            include __DIR__."/../View/alreadyRegistered.php";
+            breaK;
+          default:
+            break;
+        }
 
-        include __DIR__.'/../View/Registered.php';
 
     } else {
         include __DIR__.'/../View/IncorrectValues.php';

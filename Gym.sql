@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-01-2020 a las 09:44:43
+-- Tiempo de generación: 25-01-2020 a las 08:52:05
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 7.3.12
 
@@ -44,7 +44,19 @@ INSERT INTO `COURSES` (`CourseID`, `CourseName`, `CourseDay`, `CourseHour`, `Tra
 (2, 'ZUMBA', 'TUESDAY', '8:00', 5),
 (3, 'BODY COMBAT', 'MONDAY', '17:00', 6),
 (4, 'TRX', 'WEDNESDAY', '16:00', 7),
-(7, 'PILATES', 'THURSDAY', '12:00', 5);
+(7, 'PILATES', 'THURSDAY', '12:00', 5),
+(8, 'BOYDPUMP', 'FRIDAY', '15:00', 2),
+(9, 'KARATE', 'FRIDAY', '17:00', 3),
+(10, 'JUDO', 'MONDAY', '13:00', 2),
+(12, 'BODYCOMBAT', 'THURSDAY', '11:00', 5),
+(13, 'BODYCOMBAT', 'THURSDAY', '11:00', 5),
+(14, 'BODYCOMBAT', 'THURSDAY', '11:00', 2),
+(15, 'ATTACK', 'FRIDAY', '9:00', 1),
+(16, 'ATTACK', 'FRIDAY', '9:00', 1),
+(23, 'JUDO', 'SATURDAY', '13:00', 5),
+(24, 'SWIM', 'MONDAY', '21:00', 3),
+(35, 'Stretching', 'WEDNESDAY', '18:00', 3),
+(36, 'Body Balance', 'TUESDAY', '8:00', 3);
 
 -- --------------------------------------------------------
 
@@ -63,7 +75,8 @@ CREATE TABLE `MembersCourses` (
 --
 
 INSERT INTO `MembersCourses` (`MemberID`, `CourseID`, `MemberName`) VALUES
-(13, 2, 'USER');
+(13, 2, 'USER'),
+(15, 2, 'Ernesto');
 
 -- --------------------------------------------------------
 
@@ -88,7 +101,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`Id`, `Name`, `Surname`, `Email`, `Password`, `Telefon`, `Rool`) VALUES
 (2, 'a', 'a', 'a@a.com', '$2y$10$Yr3HdRLXRxjgZvbpQ7frvOdi.Y8UNpkbyskJJ9WZlaOoJisHWerYe', 555, 0),
 (12, 'ADMIN', 'ADMIN', 'admin@gmail.com', '$2y$10$rAvd8WE60KRK1JluOaHpd.fwiB2wKz101NY1IzsKzDW/AI4QFn5bO', 123457000, 2),
-(13, 'USER', 'USER', 'user@gmail.com', '$2y$10$x8OBChS.pBL2H9VwjZT8yuZPdw20Y0FeYJ1YmOAjfkK5FzDfGWPu2', 123457000, 0);
+(13, 'USER', 'USER', 'user@gmail.com', '$2y$10$x8OBChS.pBL2H9VwjZT8yuZPdw20Y0FeYJ1YmOAjfkK5FzDfGWPu2', 123457000, 0),
+(15, 'Ernesto', 'Vieira', 'ernesto@gmail.com', '$2y$10$iPHCYZzoHJ1d7TkoqdcFJeDji5yTjIpzD7GeRm7MKyoJQDJ25gFpW', 0, 0);
 
 --
 -- Índices para tablas volcadas
@@ -121,13 +135,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `COURSES`
 --
 ALTER TABLE `COURSES`
-  MODIFY `CourseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `CourseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas

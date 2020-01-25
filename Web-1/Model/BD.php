@@ -20,6 +20,17 @@ function encriptPsswd($sin_psswd){
 function registrarUsuari($Name, $Surname, $email, $password, $number, $Role)
 {
     global $db;
+
+    try{
+      $stmt = "SELECT * FROM users WHERE Email=$email";
+      $result = $db->query($stmt);
+      if(!$result){
+        return 1;
+      }
+      } catch(PDOException $ex){
+          echo $ex->getMessage();
+          return 2;
+    }
     $password = encriptPsswd($password);
 
     try {
@@ -27,9 +38,11 @@ function registrarUsuari($Name, $Surname, $email, $password, $number, $Role)
         $stmt = "INSERT INTO users (Name, Surname, Email, Password, Telefon, Rool)
                           VALUES ('$Name','$Surname','$email','$password','$number', $Role)";
         mysqli_query($db, $stmt);
+        return 0;
 
     }catch(PDOException $ex){
         echo $ex->getMessage();
+        return 2;
     }
 
 }
