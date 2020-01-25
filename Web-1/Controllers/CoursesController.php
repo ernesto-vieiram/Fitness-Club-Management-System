@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__.'/../Model/BD.php';
+include_once __DIR__.'/../Model/BD.php';
 
 
 $courses = getCourses();
